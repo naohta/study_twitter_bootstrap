@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Sample</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <h1>MikazukiMo</h1>
+    Bootstrap 101 Template, and Parse tutorial.
+    <ul>
+      <li><a href="http://twitter.github.io/bootstrap/getting-started.html">Bootstrap</a></li>
+      <li><a href="https://www.parse.com/apps/quickstart#js/existing">Parse</a></li>
+    </ul>
+
+    <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        Parse.initialize("IeqsZvedSqiHR4Ek5LS1V3U5LHUZsB4gmAyXtkbk","fl9B73vgUQz5nkYGz4jOZvEWtgR1a1SPJXspsTlm");
+        var TestObject = Parse.Object.extend("TestObject");
+        var testObject = new TestObject;
+        testObject.save( {foo:"bar"}, {success:function(object){alert("yay! it worked");}} );
+      });
+    </script>
+  </body>
+</html>
